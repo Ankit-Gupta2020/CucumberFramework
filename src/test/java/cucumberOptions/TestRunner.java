@@ -7,10 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/java/myFeatureFiles/AddEmployee.feature",
+		features="src/test/java/myFeatureFiles/TagFeature.feature",
 		glue="myStepDefinitionClasses",
 		monochrome = true,
-		dryRun = false)
+		dryRun = false,
+		tags = {"@SmokeTest","~@RegressionTest","@E2ETest"})
 
 public class TestRunner 
 {
